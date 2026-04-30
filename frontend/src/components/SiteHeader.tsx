@@ -8,16 +8,22 @@ export function SiteHeader() {
     { label: "Timeline", to: "/timeline" as const },
     { label: "Themes", to: "/themes" as const },
   ];
+  const title = "CHAINSAW ·· ARCHIVE";
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-3">
           <div className="flex h-8 w-8 items-center justify-center border border-blood bg-blood/20">
-            <span className="font-display text-lg leading-none text-blood">C</span>
+            <span className="font-display text-lg leading-none text-blood">
+              C
+            </span>
           </div>
           <div className="leading-tight">
-            <div className="font-display text-xl tracking-widest text-foreground glitch" data-text="CHAINSAW ARCHIVE">
-              CHAINSAW ARCHIVE
+            <div
+              className="font-display text-xl tracking-widest text-foreground glitch"
+              data-text={title}
+            >
+              {title}
             </div>
             <div className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground">
               Public Safety // Div.04
@@ -40,7 +46,10 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <button aria-label="Search" className="text-muted-foreground hover:text-blood transition-colors">
+          <button
+            aria-label="Search"
+            className="text-muted-foreground hover:text-blood transition-colors"
+          >
             <Search className="h-4 w-4" />
           </button>
           <button className="group flex items-center gap-2 border border-blood bg-blood/10 px-3 py-2 font-mono text-[10px] uppercase tracking-[0.25em] text-blood transition-all hover:bg-blood hover:text-primary-foreground">

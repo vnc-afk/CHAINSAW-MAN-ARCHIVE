@@ -8,9 +8,13 @@ import powerAction from "@/assets/char-power-action.jpg";
 import reze from "@/assets/char-reze.jpg";
 import rezeBomb from "@/assets/char-reze-bomb.jpg";
 import pochita from "@/assets/char-pochita.jpg";
-
-import gunfiend from "@/assets/char-gunfiend.jpg";
 import devilForm from "@/assets/devil-form.jpg";
+import himeno from "@/assets/char-himeno.jpg";
+import himenoGhost from "@/assets/char-himeno-ghost.jpg";
+import kobeni from "@/assets/char-kobeni.jpg";
+import kobeniAction from "@/assets/char-kobeni-action.jpg";
+import angel from "@/assets/char-angel.jpg";
+import angelAction from "@/assets/char-angel-action.jpg";
 
 export type Character = {
   id: string;
@@ -30,7 +34,10 @@ export type Character = {
   caseLog: string;
   arcs: string[];
   keyMoments: string[];
-  relations: { id: string; type: "ALLY" | "ENEMY" | "CONTRACT" | "MANIPULATION" }[];
+  relations: {
+    id: string;
+    type: "ALLY" | "ENEMY" | "CONTRACT" | "MANIPULATION";
+  }[];
 };
 
 export const characters: Character[] = [
@@ -44,8 +51,10 @@ export const characters: Character[] = [
     status: "ACTIVE",
     image: denji,
     devilImage: devilForm,
-    fearOrigin: "Chainsaws — the embodied dread of the Chainsaw Devil, Hero of Hell.",
-    contract: "Cardiac fusion with Pochita (Chainsaw Devil). Pochita serves as Denji's heart.",
+    fearOrigin:
+      "Chainsaws — the embodied dread of the Chainsaw Devil, Hero of Hell.",
+    contract:
+      "Cardiac fusion with Pochita (Chainsaw Devil). Pochita serves as Denji's heart.",
     abilities: [
       "Chainsaw Hybrid transformation (head, arms, legs)",
       "Accelerated regeneration via blood intake",
@@ -85,8 +94,10 @@ export const characters: Character[] = [
     status: "DECEASED",
     image: aki,
     devilImage: akiAction,
-    fearOrigin: "Lost family to the Gun Devil. Vengeance defines all contracts.",
-    contract: "Curse Devil (life-toll execution nail). Future Devil (precognition, right eye). Former: Fox Devil (summoning, terminated).",
+    fearOrigin:
+      "Lost family to the Gun Devil. Vengeance defines all contracts.",
+    contract:
+      "Curse Devil (life-toll execution nail). Future Devil (precognition, right eye). Former: Fox Devil (summoning, terminated).",
     abilities: [
       "Curse Sword — drives a spectral nail of bone-fox into a target; kills in three strikes",
       "Future Devil sight — sees 2 seconds ahead, no blind spots",
@@ -123,8 +134,10 @@ export const characters: Character[] = [
     status: "DECEASED",
     image: makima,
     devilImage: makimaAction,
-    fearOrigin: "Control / Conquest — the fear of being ruled. One of the Four Horsemen.",
-    contract: "Contract with the Prime Minister of Japan: any fatal injury is transferred to a random Japanese citizen as illness or accident.",
+    fearOrigin:
+      "Control / Conquest — the fear of being ruled. One of the Four Horsemen.",
+    contract:
+      "Contract with the Prime Minister of Japan: any fatal injury is transferred to a random Japanese citizen as illness or accident.",
     abilities: [
       "Control — brainwashes any being deemed 'lesser' (humans, animals, devils, fiends, hybrids)",
       "Force Manipulation — invisible 'Bang!' projection, ritual long-range crushing",
@@ -163,8 +176,10 @@ export const characters: Character[] = [
     status: "DECEASED",
     image: power,
     devilImage: powerAction,
-    fearOrigin: "Blood — the embodied concept. Tritagonist of the Public Safety Saga.",
-    contract: "Single contract with Denji: blood granted in exchange for Denji finding and befriending her reincarnated Blood Devil form.",
+    fearOrigin:
+      "Blood — the embodied concept. Tritagonist of the Public Safety Saga.",
+    contract:
+      "Single contract with Denji: blood granted in exchange for Denji finding and befriending her reincarnated Blood Devil form.",
     abilities: [
       "Blood Manipulation — weaponizes own blood freely",
       "Blood Hammer (signature), Blood Knife, Blood Spear, Blood Scythe",
@@ -202,7 +217,8 @@ export const characters: Character[] = [
     image: reze,
     devilImage: rezeBomb,
     fearOrigin: "Bombs — sudden, total detonation.",
-    contract: "Surgically fused with the Bomb Devil. Soviet-trained intelligence asset deployed to extract the Chainsaw Devil's heart.",
+    contract:
+      "Surgically fused with the Bomb Devil. Soviet-trained intelligence asset deployed to extract the Chainsaw Devil's heart.",
     abilities: [
       "Pull-cord neck transformation — head replaced by a bomb",
       "Body weaponized into propelled explosive limbs",
@@ -236,8 +252,10 @@ export const characters: Character[] = [
     status: "DORMANT",
     image: pochita,
     devilImage: devilForm,
-    fearOrigin: "Chainsaws — feared by every devil in Hell. Known as the 'Hero of Hell'.",
-    contract: "Cardiac fusion with Denji. Conditional dormancy — Pochita serves as heart so Denji may live a normal life.",
+    fearOrigin:
+      "Chainsaws — feared by every devil in Hell. Known as the 'Hero of Hell'.",
+    contract:
+      "Cardiac fusion with Denji. Conditional dormancy — Pochita serves as heart so Denji may live a normal life.",
     abilities: [
       "Devil consumption — eaten devils are erased from human memory and existence",
       "Erased concepts include Nazism, nuclear war, AIDS (per canonical fragments)",
@@ -259,6 +277,122 @@ export const characters: Character[] = [
     relations: [
       { id: "ch-001", type: "CONTRACT" },
       { id: "ch-003", type: "ENEMY" },
+    ],
+  },
+  {
+    id: "ch-007",
+    codename: "PSD-03",
+    name: "HIMENO",
+    classification: "CONTRACTOR",
+    rank: "B",
+    danger: 62,
+    status: "DECEASED",
+    image: himeno,
+    devilImage: himenoGhost,
+    fearOrigin:
+      "Ghosts — the lingering dread of the unseen dead. Veteran Devil Hunter of Tokyo Special Division 4.",
+    contract:
+      "Ghost Devil — surrendered her right eye in exchange for a spectral right arm of immense strength. Final pact: traded her entire body for a full-body Ghost manifestation against Katana Man.",
+    abilities: [
+      "Ghost Hand — invisible right arm of crushing strength",
+      "Ghost Body — full-body spectral manifestation (one-time, fatal)",
+      "Veteran combat instinct, close-quarters mentor",
+      "Heavy chain-smoker; alcohol tolerance weaponized socially",
+    ],
+    summary:
+      "Aki Hayakawa's senior partner at Public Safety. Cynical, kind, and quietly in love with Aki — drinks to forget the partners she's already buried. Wears an eyepatch over her contract-claimed right eye. Killed during the Katana Man assault when she gave her entire body to the Ghost Devil to save Aki.",
+    devilForm:
+      "GHOST CONTRACT — pulls her eyepatch aside to reveal the contract socket; Ghost Hand or full Ghost Form materializes as a translucent humanoid spectre. Full-body manifestation consumes the host completely.",
+    caseLog:
+      "Six prior partners KIA before Aki — survival rate of her squads: zero. Engaged the Eternity Devil with the squad; led the failed defense at Public Safety HQ during the Katana Man / Sawatari incursion. Status: consumed entirely by the Ghost Devil after final pact.",
+    arcs: ["arc-01", "arc-02"],
+    keyMoments: [
+      "Mentors Aki through six dead partners' worth of grief.",
+      "Drunken karaoke night — confesses feelings for Aki to the squad.",
+      "Eternity Devil hotel — endures the 3-day blood loop.",
+      "Trades her entire body to the Ghost Devil to save Aki from Katana Man — KIA.",
+    ],
+    relations: [
+      { id: "ch-002", type: "ALLY" },
+      { id: "ch-001", type: "ALLY" },
+      { id: "ch-004", type: "ALLY" },
+    ],
+  },
+  {
+    id: "ch-008",
+    codename: "PSD-09",
+    name: "KOBENI HIGASHIYAMA",
+    classification: "PUBLIC SAFETY",
+    rank: "C",
+    danger: 70,
+    status: "ACTIVE",
+    image: kobeni,
+    devilImage: kobeniAction,
+    fearOrigin:
+      "Everything — chronic terror weaponized into reflex. Forced into Public Safety by her family to fund her brother's college tuition.",
+    contract:
+      "None confirmed. Survival attributed to extreme parasympathetic reflexes and sheer dumb luck.",
+    abilities: [
+      "Superhuman acrobatic evasion — contorts impossibly under stress",
+      "Knife combat (panic-driven)",
+      "Repeatedly survives encounters that kill S-rank operatives",
+      "Pathological cowardice as tactical asset",
+    ],
+    summary:
+      "Tokyo Special Division 4's nervous wreck. Constantly crying, panicking, or dissociating — yet has outlived nearly every colleague through a combination of paranoid reflexes and improbable luck. Betrayed the squad to Sawatari under torture during the Katana Man arc, surviving to live with the guilt.",
+    devilForm:
+      "No devil contract. 'Kobeni Mode' is a panic-state combat reflex: spider-walks, impossible dodges, and frantic knife-work that has personally one-shotted a Katana Man in close quarters.",
+    caseLog:
+      "Survived: Eternity Devil hotel, Katana Man assault, Reze incident, Santa Claus / Doll Devil arc (briefly turned), the Hell incursion. Post-Public Safety: works at a Family Mart konbini. Status: ACTIVE — quit the agency, alive and traumatized.",
+    arcs: ["arc-01", "arc-02", "arc-04"],
+    keyMoments: [
+      "Eternity Devil hotel — pulls a knife on Denji to escape the loop.",
+      "Sells out the squad to Sawatari under torture during the Katana Man arc.",
+      "Disarms Katana Man in a panicked one-shot — saves the operation.",
+      "Briefly possessed by the Doll Devil; restored after the Hell arc.",
+    ],
+    relations: [
+      { id: "ch-002", type: "ALLY" },
+      { id: "ch-007", type: "ALLY" },
+    ],
+  },
+  {
+    id: "ch-009",
+    codename: "ANG-00",
+    name: "ANGEL DEVIL",
+    classification: "DEVIL",
+    rank: "A",
+    danger: 84,
+    status: "DECEASED",
+    image: angel,
+    devilImage: angelAction,
+    fearOrigin:
+      "Angels — the dread of beings who escort souls to death. A devil who hates humans yet refuses to kill them directly.",
+    contract:
+      "Conscripted into Tokyo Special Division 4 under Makima's authority. No personal contracts; partners drain their own lifespan via skin contact.",
+    abilities: [
+      "Lifespan Drain — any human he touches loses years of their life",
+      "Weapon Conversion — converts drained lifespan into divine bone-light weapons (spears, swords, halberds)",
+      "Flight via white feathered wings",
+      "Halo manifestation; sensory immunity to most devil powers",
+    ],
+    summary:
+      "Androgynous, melancholic devil bound to Public Safety. Lazy, apathetic, and openly fond of Aki — the only colleague whose hand he will hold despite the lethal cost. Foresaw Aki's death and tried, futilely, to spare him. Killed by Makima during the Gun Devil arc and reanimated as her chained weapon.",
+    devilForm:
+      "True form already manifest — humanoid with a luminous halo and white-feathered wings. Combat form summons golden bone-spears forged from drained human years.",
+    caseLog:
+      "Refused active deployment for years — Makima's leverage forced him into service. Touched Aki knowingly; both accepted the lifespan cost. KIA during Makima's purge of Public Safety; corpse weaponized as a chained Angel by the Control Devil.",
+    arcs: ["arc-03", "arc-04", "arc-05"],
+    keyMoments: [
+      "Allows Aki to hold his hand despite the lifespan toll.",
+      "Foretells Aki's death and warns him in vain.",
+      "Hell incursion — survives the Darkness Devil's mutilation.",
+      "Killed by Makima; chained and resummoned during the Control Devil arc.",
+    ],
+    relations: [
+      { id: "ch-002", type: "ALLY" },
+      { id: "ch-003", type: "ENEMY" },
+      { id: "ch-001", type: "ALLY" },
     ],
   },
 ];

@@ -16,7 +16,8 @@ export const Route = createFileRoute("/arcs")({
       { property: "og:title", content: "CASE FILES — Story Arc Archive" },
       {
         property: "og:description",
-        content: "Redacted mission briefs for each Public Safety Division 4 arc.",
+        content:
+          "Redacted mission briefs for each Public Safety Division 4 arc.",
       },
     ],
   }),
@@ -43,8 +44,9 @@ function ArcsPage() {
           CASE <span className="text-blood">FILES</span>
         </h1>
         <p className="mt-6 max-w-2xl font-mono text-sm leading-relaxed text-muted-foreground">
-          Six classified mission briefs documenting Division 4 operations. Each entry contains operative
-          rosters, key incident logs, and threat reassessments. Cross-reference at your own risk.
+          Six classified mission briefs documenting Division 4 operations. Each
+          entry contains operative rosters, key incident logs, and threat
+          reassessments. Cross-reference at your own risk.
         </p>
       </section>
 
@@ -61,18 +63,27 @@ function ArcsPage() {
 
               <div className="grid gap-6 md:grid-cols-[160px_1fr]">
                 <div className="border-r-0 md:border-r md:border-border md:pr-6">
-                  <div className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground">ARC</div>
-                  <div className="font-display text-7xl leading-none text-blood">{arc.number}</div>
+                  <div className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground">
+                    ARC
+                  </div>
+                  <div className="font-display text-7xl leading-none text-blood">
+                    {arc.number}
+                  </div>
                   <div className="mt-4 font-mono text-[10px] tracking-[0.3em] text-muted-foreground">
                     THREAT
                   </div>
                   <div className="mt-1 h-1 w-full bg-secondary">
                     <div
                       className="h-full bg-blood"
-                      style={{ width: `${arc.threat}%`, boxShadow: "0 0 10px var(--blood-glow)" }}
+                      style={{
+                        width: `${arc.threat}%`,
+                        boxShadow: "0 0 10px var(--blood-glow)",
+                      }}
                     />
                   </div>
-                  <div className="mt-1 font-mono text-[10px] text-blood">{arc.threat}/100</div>
+                  <div className="mt-1 font-mono text-[10px] text-blood">
+                    {arc.threat}/100
+                  </div>
                 </div>
 
                 <div>
@@ -85,8 +96,12 @@ function ArcsPage() {
                   >
                     {arc.title}
                   </h2>
-                  <p className="mt-2 font-mono text-xs italic text-muted-foreground">{arc.tone}</p>
-                  <p className="mt-4 text-sm leading-relaxed text-foreground">{arc.summary}</p>
+                  <p className="mt-2 font-mono text-xs italic text-muted-foreground">
+                    {arc.tone}
+                  </p>
+                  <p className="mt-4 text-sm leading-relaxed text-foreground">
+                    {arc.summary}
+                  </p>
 
                   <div className="mt-6 grid gap-6 md:grid-cols-2">
                     <div>
@@ -95,7 +110,10 @@ function ArcsPage() {
                       </div>
                       <ul className="space-y-2">
                         {arc.keyEvents.map((e, i) => (
-                          <li key={i} className="flex gap-2 font-mono text-xs leading-relaxed text-foreground">
+                          <li
+                            key={i}
+                            className="flex gap-2 font-mono text-xs leading-relaxed text-foreground"
+                          >
                             <span className="text-blood">▸</span> {e}
                           </li>
                         ))}

@@ -45,7 +45,9 @@ export function CharacterCard({ c }: { c: Character }) {
       </div>
 
       <div className="space-y-2 p-4">
-        <h3 className="font-display text-2xl tracking-wider text-foreground">{c.name}</h3>
+        <h3 className="font-display text-2xl tracking-wider text-foreground">
+          {c.name}
+        </h3>
         <div>
           <div className="mb-1 flex justify-between font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
             <span>Threat Level</span>
@@ -54,7 +56,10 @@ export function CharacterCard({ c }: { c: Character }) {
           <div className="h-1 w-full bg-secondary">
             <div
               className="h-full bg-blood transition-all"
-              style={{ width: `${c.danger}%`, boxShadow: "0 0 10px var(--blood-glow)" }}
+              style={{
+                width: `${c.danger}%`,
+                boxShadow: "0 0 10px var(--blood-glow)",
+              }}
             />
           </div>
         </div>

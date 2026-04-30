@@ -13,10 +13,14 @@ export const Route = createFileRoute("/timeline")({
         content:
           "Chronological archive of all Public Safety Division 4 incidents. From recruitment to the Control Devil reveal.",
       },
-      { property: "og:title", content: "TIMELINE — Public Safety Incident Log" },
+      {
+        property: "og:title",
+        content: "TIMELINE — Public Safety Incident Log",
+      },
       {
         property: "og:description",
-        content: "Arc-by-arc classified incident log of Chainsaw Man and Division 4.",
+        content:
+          "Arc-by-arc classified incident log of Chainsaw Man and Division 4.",
       },
       { property: "og:image", content: timelineBg },
     ],
@@ -33,7 +37,13 @@ function TimelinePage() {
       {/* HERO */}
       <section className="relative border-b border-border">
         <div className="absolute inset-0">
-          <img src={timelineBg} alt="" width={1920} height={1080} className="h-full w-full object-cover opacity-30" />
+          <img
+            src={timelineBg}
+            alt=""
+            width={1920}
+            height={1080}
+            className="h-full w-full object-cover opacity-30"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
           <div className="absolute inset-0 grid-bg opacity-20" />
         </div>
@@ -51,7 +61,8 @@ function TimelinePage() {
             INCIDENT <span className="text-blood">TIMELINE</span>
           </h1>
           <p className="mt-6 max-w-2xl font-mono text-sm leading-relaxed text-muted-foreground">
-            Sequential reconstruction of Division 4 events. Six arcs. Two ranks lost. One devil consumed. The
+            Sequential reconstruction of Division 4 events. Six arcs. Two ranks
+            lost. One devil consumed. The
             <span className="text-blood"> Control Devil cycle </span>
             documented in full.
           </p>
@@ -67,7 +78,10 @@ function TimelinePage() {
             {arcs.map((arc, i) => {
               const left = i % 2 === 0;
               return (
-                <div key={arc.id} className="relative md:grid md:grid-cols-2 md:gap-12">
+                <div
+                  key={arc.id}
+                  className="relative md:grid md:grid-cols-2 md:gap-12"
+                >
                   {/* node */}
                   <div className="absolute left-6 top-2 -translate-x-1/2 md:left-1/2">
                     <div className="relative h-4 w-4 border-2 border-blood bg-background pulse-blood" />
@@ -75,7 +89,9 @@ function TimelinePage() {
 
                   <div
                     className={`pl-16 md:pl-0 ${
-                      left ? "md:col-start-1 md:pr-12 md:text-right" : "md:col-start-2 md:pl-12"
+                      left
+                        ? "md:col-start-1 md:pr-12 md:text-right"
+                        : "md:col-start-2 md:pl-12"
                     }`}
                   >
                     <div className="mb-2 font-mono text-[10px] tracking-[0.3em] text-muted-foreground">
@@ -100,9 +116,13 @@ function TimelinePage() {
                     <p className="mt-4 font-mono text-xs italic leading-relaxed text-muted-foreground">
                       {arc.tone}
                     </p>
-                    <p className="mt-3 text-sm leading-relaxed text-foreground">{arc.summary}</p>
+                    <p className="mt-3 text-sm leading-relaxed text-foreground">
+                      {arc.summary}
+                    </p>
 
-                    <div className={`mt-4 flex flex-wrap gap-2 ${left ? "md:justify-end" : ""}`}>
+                    <div
+                      className={`mt-4 flex flex-wrap gap-2 ${left ? "md:justify-end" : ""}`}
+                    >
                       {arc.characters.map((cid) => {
                         const c = characters.find((x) => x.id === cid);
                         if (!c) return null;
@@ -133,9 +153,12 @@ function TimelinePage() {
         </div>
 
         <div className="mt-20 border border-border bg-card p-6 text-center">
-          <div className="classified-stamp text-[10px]">END OF KNOWN RECORD</div>
+          <div className="classified-stamp text-[10px]">
+            END OF KNOWN RECORD
+          </div>
           <p className="mt-4 font-mono text-xs text-muted-foreground">
-            Subsequent incidents pending. Subject CSM-01 status: <span className="text-blood">ACTIVE</span>.
+            Subsequent incidents pending. Subject CSM-01 status:{" "}
+            <span className="text-blood">ACTIVE</span>.
           </p>
         </div>
       </section>

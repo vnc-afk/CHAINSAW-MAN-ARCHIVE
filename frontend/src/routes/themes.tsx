@@ -16,14 +16,22 @@ export const Route = createFileRoute("/themes")({
       { property: "og:title", content: "CORE THEMES — Doctrinal Analysis" },
       {
         property: "og:description",
-        content: "Government-style breakdown of the core themes of Chainsaw Man.",
+        content:
+          "Government-style breakdown of the core themes of Chainsaw Man.",
       },
     ],
   }),
   component: ThemesPage,
 });
 
-const themes: { icon: LucideIcon; code: string; title: string; subtitle: string; body: string; quote: string }[] = [
+const themes: {
+  icon: LucideIcon;
+  code: string;
+  title: string;
+  subtitle: string;
+  body: string;
+  quote: string;
+}[] = [
   {
     icon: Heart,
     code: "Θ.01",
@@ -86,8 +94,9 @@ function ThemesPage() {
           CORE <span className="text-blood">THEMES</span>
         </h1>
         <p className="mt-6 max-w-2xl font-mono text-sm leading-relaxed text-muted-foreground">
-          Internal doctrinal analysis. Five operative themes recur across all case files. This document is for
-          analyst eyes only and may not be cross-referenced with field operatives.
+          Internal doctrinal analysis. Five operative themes recur across all
+          case files. This document is for analyst eyes only and may not be
+          cross-referenced with field operatives.
         </p>
       </section>
 
@@ -102,7 +111,9 @@ function ThemesPage() {
               <div className="relative">
                 <div className="mb-4 flex items-start justify-between">
                   <t.icon className="h-7 w-7 text-blood" />
-                  <span className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground">{t.code}</span>
+                  <span className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground">
+                    {t.code}
+                  </span>
                 </div>
                 <h2
                   className="glitch font-display text-2xl tracking-[0.1em] text-foreground"
@@ -110,8 +121,12 @@ function ThemesPage() {
                 >
                   {t.title}
                 </h2>
-                <p className="mt-1 font-mono text-[11px] italic text-muted-foreground">{t.subtitle}</p>
-                <p className="mt-4 text-sm leading-relaxed text-foreground">{t.body}</p>
+                <p className="mt-1 font-mono text-[11px] italic text-muted-foreground">
+                  {t.subtitle}
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-foreground">
+                  {t.body}
+                </p>
                 <blockquote className="mt-6 border-l-2 border-blood pl-4 font-mono text-xs italic text-blood">
                   {t.quote}
                 </blockquote>
@@ -123,8 +138,9 @@ function ThemesPage() {
         <div className="mt-12 border border-border bg-card p-8 text-center">
           <div className="classified-stamp text-[10px]">EYES ONLY</div>
           <p className="mt-4 font-mono text-xs text-muted-foreground">
-            Distribution restricted to clearance Ω. Unauthorized reproduction grounds for{" "}
-            <span className="redacted">PERMANENT REASSIGNMENT</span>.
+            Distribution restricted to clearance Ω. Unauthorized reproduction
+            grounds for <span className="redacted">PERMANENT REASSIGNMENT</span>
+            .
           </p>
         </div>
       </section>

@@ -8,114 +8,114 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root'
-import { Route as TimelineRouteImport } from './routes/timeline'
-import { Route as ThemesRouteImport } from './routes/themes'
-import { Route as ArcsRouteImport } from './routes/arcs'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as CharacterIdRouteImport } from './routes/character.$id'
+import { Route as rootRouteImport } from "./routes/__root";
+import { Route as TimelineRouteImport } from "./routes/timeline";
+import { Route as ThemesRouteImport } from "./routes/themes";
+import { Route as ArcsRouteImport } from "./routes/arcs";
+import { Route as IndexRouteImport } from "./routes/index";
+import { Route as CharacterIdRouteImport } from "./routes/character.$id";
 
 const TimelineRoute = TimelineRouteImport.update({
-  id: '/timeline',
-  path: '/timeline',
+  id: "/timeline",
+  path: "/timeline",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const ThemesRoute = ThemesRouteImport.update({
-  id: '/themes',
-  path: '/themes',
+  id: "/themes",
+  path: "/themes",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const ArcsRoute = ArcsRouteImport.update({
-  id: '/arcs',
-  path: '/arcs',
+  id: "/arcs",
+  path: "/arcs",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+  id: "/",
+  path: "/",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 const CharacterIdRoute = CharacterIdRouteImport.update({
-  id: '/character/$id',
-  path: '/character/$id',
+  id: "/character/$id",
+  path: "/character/$id",
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/arcs': typeof ArcsRoute
-  '/themes': typeof ThemesRoute
-  '/timeline': typeof TimelineRoute
-  '/character/$id': typeof CharacterIdRoute
+  "/": typeof IndexRoute;
+  "/arcs": typeof ArcsRoute;
+  "/themes": typeof ThemesRoute;
+  "/timeline": typeof TimelineRoute;
+  "/character/$id": typeof CharacterIdRoute;
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/arcs': typeof ArcsRoute
-  '/themes': typeof ThemesRoute
-  '/timeline': typeof TimelineRoute
-  '/character/$id': typeof CharacterIdRoute
+  "/": typeof IndexRoute;
+  "/arcs": typeof ArcsRoute;
+  "/themes": typeof ThemesRoute;
+  "/timeline": typeof TimelineRoute;
+  "/character/$id": typeof CharacterIdRoute;
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
-  '/arcs': typeof ArcsRoute
-  '/themes': typeof ThemesRoute
-  '/timeline': typeof TimelineRoute
-  '/character/$id': typeof CharacterIdRoute
+  __root__: typeof rootRouteImport;
+  "/": typeof IndexRoute;
+  "/arcs": typeof ArcsRoute;
+  "/themes": typeof ThemesRoute;
+  "/timeline": typeof TimelineRoute;
+  "/character/$id": typeof CharacterIdRoute;
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/arcs' | '/themes' | '/timeline' | '/character/$id'
-  fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/arcs' | '/themes' | '/timeline' | '/character/$id'
-  id: '__root__' | '/' | '/arcs' | '/themes' | '/timeline' | '/character/$id'
-  fileRoutesById: FileRoutesById
+  fileRoutesByFullPath: FileRoutesByFullPath;
+  fullPaths: "/" | "/arcs" | "/themes" | "/timeline" | "/character/$id";
+  fileRoutesByTo: FileRoutesByTo;
+  to: "/" | "/arcs" | "/themes" | "/timeline" | "/character/$id";
+  id: "__root__" | "/" | "/arcs" | "/themes" | "/timeline" | "/character/$id";
+  fileRoutesById: FileRoutesById;
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  ArcsRoute: typeof ArcsRoute
-  ThemesRoute: typeof ThemesRoute
-  TimelineRoute: typeof TimelineRoute
-  CharacterIdRoute: typeof CharacterIdRoute
+  IndexRoute: typeof IndexRoute;
+  ArcsRoute: typeof ArcsRoute;
+  ThemesRoute: typeof ThemesRoute;
+  TimelineRoute: typeof TimelineRoute;
+  CharacterIdRoute: typeof CharacterIdRoute;
 }
 
-declare module '@tanstack/react-router' {
+declare module "@tanstack/react-router" {
   interface FileRoutesByPath {
-    '/timeline': {
-      id: '/timeline'
-      path: '/timeline'
-      fullPath: '/timeline'
-      preLoaderRoute: typeof TimelineRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/themes': {
-      id: '/themes'
-      path: '/themes'
-      fullPath: '/themes'
-      preLoaderRoute: typeof ThemesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/arcs': {
-      id: '/arcs'
-      path: '/arcs'
-      fullPath: '/arcs'
-      preLoaderRoute: typeof ArcsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/character/$id': {
-      id: '/character/$id'
-      path: '/character/$id'
-      fullPath: '/character/$id'
-      preLoaderRoute: typeof CharacterIdRouteImport
-      parentRoute: typeof rootRouteImport
-    }
+    "/timeline": {
+      id: "/timeline";
+      path: "/timeline";
+      fullPath: "/timeline";
+      preLoaderRoute: typeof TimelineRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/themes": {
+      id: "/themes";
+      path: "/themes";
+      fullPath: "/themes";
+      preLoaderRoute: typeof ThemesRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/arcs": {
+      id: "/arcs";
+      path: "/arcs";
+      fullPath: "/arcs";
+      preLoaderRoute: typeof ArcsRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/": {
+      id: "/";
+      path: "/";
+      fullPath: "/";
+      preLoaderRoute: typeof IndexRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/character/$id": {
+      id: "/character/$id";
+      path: "/character/$id";
+      fullPath: "/character/$id";
+      preLoaderRoute: typeof CharacterIdRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
   }
 }
 
@@ -125,16 +125,16 @@ const rootRouteChildren: RootRouteChildren = {
   ThemesRoute: ThemesRoute,
   TimelineRoute: TimelineRoute,
   CharacterIdRoute: CharacterIdRoute,
-}
+};
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>()
+  ._addFileTypes<FileRouteTypes>();
 
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
+import type { getRouter } from "./router.tsx";
+import type { createStart } from "@tanstack/react-start";
+declare module "@tanstack/react-start" {
   interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
+    ssr: true;
+    router: Awaited<ReturnType<typeof getRouter>>;
   }
 }
