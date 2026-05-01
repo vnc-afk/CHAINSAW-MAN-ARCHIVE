@@ -80,32 +80,32 @@ function ThemesPage() {
       <div className="scan-line" />
       <SiteHeader />
 
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-6 flex items-center gap-3">
           <span className="h-px w-10 bg-blood" />
-          <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-blood">
+          <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-blood sm:text-[10px] sm:tracking-[0.4em]">
             DOCTRINE Θ.00 // BEHAVIORAL ANALYSIS
           </span>
         </div>
         <h1
-          className="glitch font-display text-5xl tracking-tight text-foreground md:text-7xl"
+          className="glitch font-display text-4xl tracking-tight text-foreground sm:text-5xl md:text-7xl"
           data-text="CORE THEMES"
         >
           CORE <span className="text-blood">THEMES</span>
         </h1>
-        <p className="mt-6 max-w-2xl font-mono text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-6 max-w-2xl font-mono text-xs leading-relaxed text-muted-foreground sm:text-sm">
           Internal doctrinal analysis. Five operative themes recur across all
           case files. This document is for analyst eyes only and may not be
           cross-referenced with field operatives.
         </p>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-24">
+      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 sm:pb-24">
         <div className="grid gap-4 md:grid-cols-2">
           {themes.map((t) => (
             <article
               key={t.code}
-              className="group relative overflow-hidden border border-border bg-card p-8 transition-all hover:border-blood"
+              className="group relative overflow-hidden border border-border bg-card p-6 transition-all hover:border-blood sm:p-8"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-blood/0 transition-all duration-500 group-hover:to-blood/15" />
               <div className="relative">
@@ -135,7 +135,7 @@ function ThemesPage() {
           ))}
         </div>
 
-        <div className="mt-12 border border-border bg-card p-8 text-center">
+        <div className="mt-12 border border-border bg-card p-6 text-center sm:p-8">
           <div className="classified-stamp text-[10px]">EYES ONLY</div>
           <p className="mt-4 font-mono text-xs text-muted-foreground">
             Distribution restricted to clearance Ω. Unauthorized reproduction

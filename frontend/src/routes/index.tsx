@@ -52,16 +52,16 @@ function Index() {
           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,transparent_70%,color-mix(in_oklab,var(--blood)_30%,transparent)_100%)]" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-6 py-28 md:py-40">
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 md:py-40">
           <div className="mb-6 flex items-center gap-3">
             <span className="h-px w-10 bg-blood" />
-            <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-blood">
+            <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-blood sm:text-[10px] sm:tracking-[0.4em]">
               FILE 0451 // ACCESS RESTRICTED
             </span>
           </div>
 
           <h1
-            className="glitch font-display text-5xl leading-[0.9] tracking-tight text-foreground md:text-8xl lg:text-[8.5rem]"
+            className="glitch font-display text-4xl leading-[0.95] tracking-tight text-foreground sm:text-6xl md:text-8xl lg:text-[8.5rem]"
             data-text="PUBLIC SAFETY DEVIL DATABASE"
           >
             PUBLIC SAFETY
@@ -69,7 +69,7 @@ function Index() {
             <span className="text-blood">DEVIL</span> DATABASE
           </h1>
 
-          <p className="mt-8 max-w-xl font-mono text-sm leading-relaxed text-muted-foreground md:text-base">
+          <p className="mt-6 max-w-xl font-mono text-xs leading-relaxed text-muted-foreground sm:mt-8 sm:text-sm md:text-base">
             Access classified records of{" "}
             <span className="text-foreground">Devils</span>,{" "}
             <span className="text-foreground">Hybrids</span>, and{" "}
@@ -77,11 +77,11 @@ function Index() {
             monitored. Unauthorized cross-reference is a federal offense.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
             <Link
               to="/character/$id"
               params={{ id: "ch-001" }}
-              className="group flex items-center gap-3 border-2 border-blood bg-blood px-7 py-4 font-display tracking-[0.2em] text-primary-foreground transition-all hover:bg-blood-glow"
+              className="group flex items-center gap-3 border-2 border-blood bg-blood px-5 py-3 font-display text-sm tracking-[0.2em] text-primary-foreground transition-all hover:bg-blood-glow sm:px-7 sm:py-4 sm:text-base"
               style={{ boxShadow: "0 0 30px -5px var(--blood)" }}
             >
               ENTER ARCHIVE
@@ -89,13 +89,13 @@ function Index() {
             </Link>
             <Link
               to="/timeline"
-              className="flex items-center gap-3 border-2 border-border bg-background/40 px-7 py-4 font-display tracking-[0.2em] text-foreground transition-all hover:border-blood hover:text-blood"
+              className="flex items-center gap-3 border-2 border-border bg-background/40 px-5 py-3 font-display text-sm tracking-[0.2em] text-foreground transition-all hover:border-blood hover:text-blood sm:px-7 sm:py-4 sm:text-base"
             >
               VIEW TIMELINE
             </Link>
           </div>
 
-          <div className="mt-16 grid max-w-2xl grid-cols-3 gap-6 border-t border-border pt-6">
+          <div className="mt-12 grid max-w-2xl grid-cols-3 gap-4 border-t border-border pt-6 sm:mt-16 sm:gap-6">
             <Stat label="DEVILS LOGGED" value="1,247" />
             <Stat label="HYBRIDS ACTIVE" value="03" />
             <Stat label="THREATS PENDING" value="∞" pulse />
@@ -104,11 +104,11 @@ function Index() {
       </section>
 
       {/* CATEGORIES */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
         <SectionHeader code="C.01" subtitle="CLASSIFICATION TIERS">
           ARCHIVE CATEGORIES
         </SectionHeader>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <CategoryCard
             icon={ShieldAlert}
             title="Public Safety"
@@ -141,7 +141,10 @@ function Index() {
       </section>
 
       {/* CHARACTERS */}
-      <section id="characters" className="mx-auto max-w-7xl px-6 pb-24">
+      <section
+        id="characters"
+        className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 sm:pb-24"
+      >
         <SectionHeader code="F.02" subtitle="HIGH-PRIORITY DOSSIERS">
           FEATURED CHARACTERS
         </SectionHeader>
@@ -153,20 +156,20 @@ function Index() {
       </section>
 
       {/* LORE / CLASSIFIED PANEL */}
-      <section className="mx-auto max-w-7xl px-6 pb-24">
+      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 sm:pb-24">
         <SectionHeader code="L.03" subtitle="DECLASSIFIED EXCERPT">
           THE FEAR SYSTEM
         </SectionHeader>
-        <div className="relative border border-border bg-card p-8 md:p-12">
-          <div className="absolute right-8 top-8 classified-stamp text-[11px]">
+        <div className="relative border border-border bg-card p-5 sm:p-8 md:p-12">
+          <div className="absolute right-4 top-4 classified-stamp text-[9px] sm:right-8 sm:top-8 sm:text-[11px]">
             DECLASSIFIED
           </div>
-          <div className="absolute left-8 top-8 font-mono text-[10px] tracking-[0.3em] text-muted-foreground">
+          <div className="absolute left-4 top-4 hidden font-mono text-[10px] tracking-[0.3em] text-muted-foreground sm:left-8 sm:top-8 sm:block">
             DOC: 0451-OMEGA // CLEARANCE β
           </div>
 
-          <div className="mt-16 grid gap-8 md:grid-cols-2">
-            <div className="space-y-4 font-mono text-sm leading-relaxed text-foreground">
+          <div className="mt-12 grid gap-6 sm:mt-16 sm:gap-8 md:grid-cols-2">
+            <div className="space-y-4 font-mono text-xs leading-relaxed text-foreground sm:text-sm">
               <p>
                 Devils are the manifestation of{" "}
                 <span className="text-blood">human fear</span>. Their strength
@@ -184,7 +187,7 @@ function Index() {
                 exception.
               </p>
             </div>
-            <div className="space-y-4 font-mono text-sm leading-relaxed text-muted-foreground">
+            <div className="space-y-4 font-mono text-xs leading-relaxed text-muted-foreground sm:text-sm">
               <p>
                 Contractors trade fragments of their humanity — years of life,
                 organs, sensation — for temporary devil power. Hybrids represent
@@ -203,13 +206,13 @@ function Index() {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6">
-            <div className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground">
+          <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6 sm:mt-12">
+            <div className="font-mono text-[9px] tracking-[0.3em] text-muted-foreground sm:text-[10px]">
               END EXCERPT // PAGE 1 OF [REDACTED]
             </div>
             <Link
               to="/themes"
-              className="group flex items-center gap-2 border border-blood px-5 py-3 font-display tracking-[0.2em] text-blood transition-all hover:bg-blood hover:text-primary-foreground"
+              className="group flex items-center gap-2 border border-blood px-4 py-2.5 font-display text-xs tracking-[0.2em] text-blood transition-all hover:bg-blood hover:text-primary-foreground sm:px-5 sm:py-3 sm:text-sm"
             >
               VIEW FULL CLASSIFICATION SYSTEM
               <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
@@ -219,7 +222,7 @@ function Index() {
       </section>
 
       {/* DIRECTORY LINKS */}
-      <section className="mx-auto max-w-7xl px-6 pb-24">
+      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 sm:pb-24">
         <SectionHeader code="D.04" subtitle="DEEPER ACCESS">
           ARCHIVE DIRECTORIES
         </SectionHeader>
@@ -283,16 +286,16 @@ function SectionHeader({
   subtitle: string;
 }) {
   return (
-    <div className="mb-10 flex items-end justify-between border-b border-border pb-4">
-      <div>
-        <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.4em] text-blood">
+    <div className="mb-8 flex flex-col gap-2 border-b border-border pb-4 sm:mb-10 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
+      <div className="min-w-0">
+        <div className="mb-2 font-mono text-[9px] uppercase tracking-[0.3em] text-blood sm:text-[10px] sm:tracking-[0.4em]">
           {subtitle}
         </div>
-        <h2 className="font-display text-4xl tracking-[0.1em] text-foreground md:text-5xl">
+        <h2 className="font-display text-3xl tracking-[0.1em] text-foreground sm:text-4xl md:text-5xl">
           {children}
         </h2>
       </div>
-      <span className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground">
+      <span className="font-mono text-[9px] tracking-[0.3em] text-muted-foreground sm:text-[10px]">
         SECTION {code}
       </span>
     </div>

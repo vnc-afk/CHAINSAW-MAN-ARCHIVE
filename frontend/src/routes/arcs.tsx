@@ -30,43 +30,43 @@ function ArcsPage() {
       <div className="scan-line" />
       <SiteHeader />
 
-      <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="mb-10 flex items-center gap-3">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
+        <div className="mb-8 flex items-center gap-3 sm:mb-10">
           <span className="h-px w-10 bg-blood" />
-          <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-blood">
+          <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-blood sm:text-[10px] sm:tracking-[0.4em]">
             DIRECTORY A.00 // CASE FILES
           </span>
         </div>
         <h1
-          className="glitch font-display text-5xl tracking-tight text-foreground md:text-7xl"
+          className="glitch font-display text-4xl tracking-tight text-foreground sm:text-5xl md:text-7xl"
           data-text="STORY ARCS"
         >
           CASE <span className="text-blood">FILES</span>
         </h1>
-        <p className="mt-6 max-w-2xl font-mono text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-6 max-w-2xl font-mono text-xs leading-relaxed text-muted-foreground sm:text-sm">
           Six classified mission briefs documenting Division 4 operations. Each
           entry contains operative rosters, key incident logs, and threat
           reassessments. Cross-reference at your own risk.
         </p>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-24">
+      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 sm:pb-24">
         <div className="space-y-6">
           {arcs.map((arc) => (
             <article
               key={arc.id}
-              className="group relative border border-border bg-card p-6 transition-all hover:border-blood md:p-8"
+              className="group relative border border-border bg-card p-5 transition-all hover:border-blood sm:p-6 md:p-8"
             >
-              <div className="absolute right-6 top-6 classified-stamp text-[9px]">
+              <div className="absolute right-3 top-3 classified-stamp text-[8px] sm:right-6 sm:top-6 sm:text-[9px]">
                 {arc.status === "REDACTED" ? "REDACTED" : "DECLASSIFIED"}
               </div>
 
               <div className="grid gap-6 md:grid-cols-[160px_1fr]">
-                <div className="border-r-0 md:border-r md:border-border md:pr-6">
+                <div className="border-b border-border pb-4 md:border-b-0 md:border-r md:border-border md:pb-0 md:pr-6">
                   <div className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground">
                     ARC
                   </div>
-                  <div className="font-display text-7xl leading-none text-blood">
+                  <div className="font-display text-5xl leading-none text-blood sm:text-7xl">
                     {arc.number}
                   </div>
                   <div className="mt-4 font-mono text-[10px] tracking-[0.3em] text-muted-foreground">

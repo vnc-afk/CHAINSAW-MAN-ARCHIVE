@@ -31,7 +31,7 @@ export function CharacterCard({ c }: { c: Character }) {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
         <div className="pointer-events-none absolute inset-0 scanlines opacity-40" />
 
-        <div className="absolute left-3 top-3 z-10 flex items-center gap-2">
+        <div className="absolute left-2 top-2 z-10 flex max-w-[60%] flex-wrap items-center gap-1.5 sm:left-3 sm:top-3 sm:gap-2">
           <span className="border border-blood bg-background/80 px-1.5 py-0.5 font-mono text-[9px] tracking-[0.2em] text-blood">
             {c.classification}
           </span>

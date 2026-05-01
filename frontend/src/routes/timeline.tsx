@@ -47,20 +47,20 @@ function TimelinePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
           <div className="absolute inset-0 grid-bg opacity-20" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-28">
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 md:py-28">
           <div className="mb-6 flex items-center gap-3">
             <span className="h-px w-10 bg-blood" />
-            <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-blood">
+            <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-blood sm:text-[10px] sm:tracking-[0.4em]">
               FILE T.00 // CHRONOLOGICAL LOG
             </span>
           </div>
           <h1
-            className="glitch font-display text-5xl leading-[0.9] tracking-tight text-foreground md:text-7xl"
+            className="glitch font-display text-4xl leading-[0.95] tracking-tight text-foreground sm:text-5xl md:text-7xl"
             data-text="INCIDENT TIMELINE"
           >
             INCIDENT <span className="text-blood">TIMELINE</span>
           </h1>
-          <p className="mt-6 max-w-2xl font-mono text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-6 max-w-2xl font-mono text-xs leading-relaxed text-muted-foreground sm:text-sm">
             Sequential reconstruction of Division 4 events. Six arcs. Two ranks
             lost. One devil consumed. The
             <span className="text-blood"> Control Devil cycle </span>
@@ -70,7 +70,7 @@ function TimelinePage() {
       </section>
 
       {/* TIMELINE */}
-      <section className="mx-auto max-w-5xl px-6 py-20">
+      <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="relative">
           {/* spine */}
           <div className="absolute left-6 top-0 bottom-0 w-px bg-border md:left-1/2" />

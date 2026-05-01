@@ -104,7 +104,7 @@ function CharacterPage() {
       <div className="scan-line" />
       <SiteHeader />
 
-      <div className="mx-auto max-w-7xl px-6 py-6">
+      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6">
         <button
           onClick={() => router.history.back()}
           className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground hover:text-blood"
@@ -114,8 +114,8 @@ function CharacterPage() {
       </div>
 
       {/* HERO */}
-      <section className="relative mx-auto max-w-7xl px-6 pb-12">
-        <div className="grid gap-8 md:grid-cols-[1fr_1.2fr]">
+      <section className="relative mx-auto max-w-7xl px-4 pb-12 sm:px-6">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-[1fr_1.2fr]">
           <div className="relative corner-frame">
             <div className="relative aspect-[3/4] overflow-hidden border border-border bg-gradient-to-b from-secondary/40 to-background">
               <img
@@ -123,7 +123,7 @@ function CharacterPage() {
                 alt={c.name}
                 width={768}
                 height={1024}
-                className="h-full w-full object-contain p-4 transition-all duration-700 animate-fade-in"
+                className="h-full w-full object-contain p-3 transition-all duration-700 animate-fade-in sm:p-4"
                 style={{
                   filter: devilForm
                     ? "contrast(1.15) saturate(1.3) drop-shadow(0 0 20px var(--blood-glow))"
@@ -133,10 +133,10 @@ function CharacterPage() {
               />
               <div className="pointer-events-none absolute inset-0 scanlines opacity-30" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-background/40" />
-              <div className="absolute left-4 top-4 font-mono text-[10px] tracking-[0.3em] text-blood">
+              <div className="absolute left-3 top-3 max-w-[80%] truncate font-mono text-[9px] tracking-[0.2em] text-blood sm:left-4 sm:top-4 sm:text-[10px] sm:tracking-[0.3em]">
                 {c.codename} // {devilForm ? formLabels!.b : formLabels!.a}
               </div>
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between font-mono text-[10px] tracking-[0.2em] text-muted-foreground">
+              <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[9px] tracking-[0.2em] text-muted-foreground sm:bottom-4 sm:left-4 sm:right-4 sm:text-[10px]">
                 <span>SCAN: {Math.floor(Math.random() * 9999)}.A</span>
                 <span className="text-blood flicker">● REC</span>
               </div>
@@ -145,7 +145,7 @@ function CharacterPage() {
 
           <div className="flex flex-col justify-between">
             <div>
-              <div className="mb-3 flex items-center gap-2">
+              <div className="mb-3 flex flex-wrap items-center gap-2">
                 <span className="classified-stamp text-[10px]">CLASSIFIED</span>
                 <span className="border border-border bg-card px-2 py-1 font-mono text-[9px] tracking-[0.25em] text-muted-foreground">
                   {c.classification}
@@ -155,16 +155,16 @@ function CharacterPage() {
                 </span>
               </div>
               <h1
-                className="glitch font-display text-6xl leading-none tracking-wider text-foreground md:text-8xl"
+                className="glitch font-display text-4xl leading-none tracking-wider text-foreground break-words sm:text-6xl md:text-7xl lg:text-8xl"
                 data-text={c.name}
               >
                 {c.name}
               </h1>
-              <p className="mt-2 font-mono text-[11px] tracking-[0.3em] text-muted-foreground">
+              <p className="mt-2 font-mono text-[10px] tracking-[0.25em] text-muted-foreground sm:text-[11px] sm:tracking-[0.3em]">
                 STATUS: <span className="text-blood">{c.status}</span>
               </p>
 
-              <div className="mt-8">
+              <div className="mt-6 sm:mt-8">
                 <div className="mb-2 flex justify-between font-mono text-[10px] uppercase tracking-[0.3em]">
                   <span className="text-muted-foreground">Danger Meter</span>
                   <span className="text-blood">{c.danger} / 100</span>
@@ -177,16 +177,16 @@ function CharacterPage() {
                 </div>
               </div>
 
-              <p className="mt-8 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground sm:mt-8">
                 {c.summary}
               </p>
             </div>
 
             <button
               onClick={() => setDevilForm((v) => !v)}
-              className="mt-8 group flex w-fit items-center gap-3 border-2 border-blood bg-blood/10 px-6 py-3 font-display tracking-[0.2em] text-blood transition-all hover:bg-blood hover:text-primary-foreground"
+              className="mt-6 group flex w-full items-center justify-center gap-2 border-2 border-blood bg-blood/10 px-4 py-3 font-display text-sm tracking-[0.15em] text-blood transition-all hover:bg-blood hover:text-primary-foreground sm:mt-8 sm:w-fit sm:gap-3 sm:px-6 sm:text-base sm:tracking-[0.2em]"
             >
-              <RotateCw className="h-4 w-4 transition-transform group-hover:rotate-180" />
+              <RotateCw className="h-4 w-4 shrink-0 transition-transform group-hover:rotate-180" />
               SWITCH FORM // {formLabels!.switchTo(devilForm)}
             </button>
           </div>
@@ -194,7 +194,7 @@ function CharacterPage() {
       </section>
 
       {/* INFO GRID */}
-      <section className="mx-auto max-w-7xl px-6 pb-16">
+      <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 sm:pb-16">
         <div className="grid gap-4 md:grid-cols-3">
           <InfoPanel label="ABILITIES" code="A.01">
             <ul className="space-y-2">
@@ -219,7 +219,7 @@ function CharacterPage() {
           </InfoPanel>
           <InfoPanel label="DANGER CLASSIFICATION" code="D.03">
             <div className="flex items-baseline gap-3">
-              <span className="font-display text-7xl leading-none text-blood">
+              <span className="font-display text-6xl leading-none text-blood sm:text-7xl">
                 {c.rank}
               </span>
               <span className="font-mono text-xs text-muted-foreground">
@@ -234,7 +234,7 @@ function CharacterPage() {
       </section>
 
       {/* KEY MOMENTS */}
-      <section className="mx-auto max-w-7xl px-6 pb-16">
+      <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 sm:pb-16">
         <SectionTitle code="K.04">KEY OPERATIONAL MOMENTS</SectionTitle>
         <ol className="grid gap-3 md:grid-cols-2">
           {c.keyMoments.map((m, i) => (
@@ -252,7 +252,7 @@ function CharacterPage() {
 
       {/* ARC INVOLVEMENT */}
       {c.arcs.length > 0 && (
-        <section className="mx-auto max-w-7xl px-6 pb-16">
+        <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 sm:pb-16">
           <SectionTitle code="A.05">ARC INVOLVEMENT</SectionTitle>
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             {c.arcs
@@ -283,23 +283,23 @@ function CharacterPage() {
       )}
 
       {/* RELATIONS */}
-      <section className="mx-auto max-w-7xl px-6 pb-16">
+      <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 sm:pb-16">
         <SectionTitle code="R.06">RELATIONSHIP NETWORK</SectionTitle>
         <RelationGraph centerId={c.id} />
       </section>
 
       {/* CASE LOG */}
-      <section className="mx-auto max-w-7xl px-6 pb-20">
+      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20">
         <SectionTitle code="L.07">CASE FILE LOG</SectionTitle>
-        <div className="relative border border-border bg-card p-8">
-          <div className="absolute right-6 top-6 classified-stamp text-[10px]">
+        <div className="relative border border-border bg-card p-5 sm:p-8">
+          <div className="absolute right-4 top-4 classified-stamp text-[9px] sm:right-6 sm:top-6 sm:text-[10px]">
             TOP SECRET
           </div>
-          <div className="absolute left-6 top-6 font-mono text-[10px] tracking-[0.3em] text-muted-foreground">
+          <div className="absolute left-4 top-4 hidden font-mono text-[10px] tracking-[0.3em] text-muted-foreground sm:left-6 sm:top-6 sm:block">
             FILE {c.codename} // ENTRY 0451
           </div>
 
-          <div className="mt-12 space-y-4 font-mono text-sm leading-relaxed text-foreground">
+          <div className="mt-10 space-y-4 font-mono text-xs leading-relaxed text-foreground sm:mt-12 sm:text-sm">
             <p>{c.caseLog}</p>
             <p>
               Operative interrogation transcripts redacted on order of{" "}
@@ -316,8 +316,8 @@ function CharacterPage() {
             </p>
           </div>
 
-          <div className="mt-8 flex items-center gap-3 border-t border-border pt-4 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            <ShieldAlert className="h-3 w-3 text-blood" />
+          <div className="mt-6 flex items-start gap-3 border-t border-border pt-4 font-mono text-[9px] uppercase tracking-[0.25em] text-muted-foreground sm:mt-8 sm:items-center sm:text-[10px] sm:tracking-[0.3em]">
+            <ShieldAlert className="h-3 w-3 shrink-0 text-blood" />
             HANDLING NOTICE: VIEWING THIS FILE WITHOUT CLEARANCE IS A FEDERAL
             OFFENSE.
           </div>
@@ -337,11 +337,11 @@ function SectionTitle({
   code: string;
 }) {
   return (
-    <div className="mb-6 flex items-end justify-between border-b border-border pb-3">
-      <h2 className="font-display text-3xl tracking-[0.15em] text-foreground">
+    <div className="mb-6 flex flex-col gap-1 border-b border-border pb-3 sm:flex-row sm:items-end sm:justify-between sm:gap-3">
+      <h2 className="font-display text-2xl tracking-[0.12em] text-foreground sm:text-3xl sm:tracking-[0.15em]">
         {children}
       </h2>
-      <span className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground">
+      <span className="font-mono text-[9px] tracking-[0.3em] text-muted-foreground sm:text-[10px]">
         SECTION {code}
       </span>
     </div>
@@ -384,50 +384,94 @@ function RelationGraph({ centerId }: { centerId: string }) {
   };
 
   return (
-    <div className="relative mx-auto h-[480px] w-full max-w-3xl border border-border bg-card grid-bg">
-      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 600 480">
+    <>
+      {/* Mobile-friendly list */}
+      <div className="grid gap-2 sm:grid-cols-2 md:hidden">
+        {others.map((o) => {
+          const rel = center.relations.find((r) => r.id === o.id);
+          return (
+            <Link
+              key={o.id}
+              to="/character/$id"
+              params={{ id: o.id }}
+              className="flex items-center justify-between gap-3 border border-border bg-card p-3 hover:border-blood"
+            >
+              <div className="min-w-0">
+                <div className="truncate font-display text-sm tracking-widest text-foreground">
+                  {o.name}
+                </div>
+                <div className="truncate font-mono text-[9px] tracking-[0.2em] text-muted-foreground">
+                  {o.codename}
+                </div>
+              </div>
+              {rel && (
+                <span
+                  className="shrink-0 border px-2 py-0.5 font-mono text-[9px] tracking-[0.2em]"
+                  style={{
+                    color: colorMap[rel.type],
+                    borderColor: colorMap[rel.type],
+                  }}
+                >
+                  {rel.type}
+                </span>
+              )}
+            </Link>
+          );
+        })}
+      </div>
+
+      {/* Desktop graph */}
+      <div className="relative mx-auto hidden h-[480px] w-full max-w-3xl border border-border bg-card grid-bg md:block">
+        <svg className="absolute inset-0 h-full w-full" viewBox="0 0 600 480">
+          {others.map((o, i) => {
+            const angle = (i / others.length) * Math.PI * 2 - Math.PI / 2;
+            const x = 300 + Math.cos(angle) * radius;
+            const y = 240 + Math.sin(angle) * radius;
+            const rel = center.relations.find((r) => r.id === o.id);
+            const color = rel ? colorMap[rel.type] : "var(--border)";
+            return (
+              <line
+                key={o.id}
+                x1={300}
+                y1={240}
+                x2={x}
+                y2={y}
+                stroke={color}
+                strokeWidth={1}
+                strokeDasharray="3 3"
+                opacity={0.7}
+              />
+            );
+          })}
+        </svg>
+
+        {/* center node */}
+        <Node
+          x="50%"
+          y="50%"
+          name={center.name}
+          code={center.codename}
+          active
+        />
+
         {others.map((o, i) => {
           const angle = (i / others.length) * Math.PI * 2 - Math.PI / 2;
-          const x = 300 + Math.cos(angle) * radius;
-          const y = 240 + Math.sin(angle) * radius;
+          const x = 50 + (Math.cos(angle) * radius * 100) / 600;
+          const y = 50 + (Math.sin(angle) * radius * 100) / 480;
           const rel = center.relations.find((r) => r.id === o.id);
-          const color = rel ? colorMap[rel.type] : "var(--border)";
           return (
-            <line
-              key={o.id}
-              x1={300}
-              y1={240}
-              x2={x}
-              y2={y}
-              stroke={color}
-              strokeWidth={1}
-              strokeDasharray="3 3"
-              opacity={0.7}
+            <Node
+              x={`${x}%`}
+              y={`${y}%`}
+              name={o.name}
+              code={o.codename}
+              type={rel?.type}
+              toId={o.id}
             />
           );
         })}
-      </svg>
-
-      {/* center node */}
-      <Node x="50%" y="50%" name={center.name} code={center.codename} active />
-      {others.map((o, i) => {
-        const angle = (i / others.length) * Math.PI * 2 - Math.PI / 2;
-        const x = 50 + (Math.cos(angle) * radius * 100) / 600;
-        const y = 50 + (Math.sin(angle) * radius * 100) / 480;
-        const rel = center.relations.find((r) => r.id === o.id);
-        return (
-          <Node
-            key={o.id}
-            x={`${x}%`}
-            y={`${y}%`}
-            name={o.name}
-            code={o.codename}
-            type={rel?.type}
-            toId={o.id}
-          />
-        );
-      })}
-    </div>
+      </div>
+    </>
   );
 }
 
